@@ -1,23 +1,43 @@
 import React, { useState, useEffect } from 'react';
+import { A, Header, Section, Span } from './styles';
 
 function App() {
 
-  const [books, setBooks] = useState([]);
+  const [book, setBook] = useState([]);
 
   useEffect(() => {
-    const url = 'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=';
+  
+    function loadApi(){
+      const url = 'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=PZy6zRJQZ4SsU0awzngnwNhfG2rjdFEg';
+  
+      fetch(url)
+      .then((result)=> result.json())
+      .then((json) => {
+        setBook(json.results.books);
+      })
+    }
 
-    fetch(url)
-    .then((result)=> result.json())
-    .then((json) => {
-      console.log(json);
-      setBooks(json);
-    })
+    loadApi();
   },[])
 
   return (
-    <div className="App">
-      <h1>News Time App</h1>
+    <div>
+      <Header>News Time App</Header>
+
+      <Section>
+        {
+          book.map((item) => {
+            return(
+              <Span key={item.rank}>
+                  <img src={item.book_image} />
+                  <strong>{item.author}</strong>
+                  <A href=''>Detalhes</A>
+              </Span>
+            )
+          })
+        }
+      </Section>
+
     </div>
   );
 }
