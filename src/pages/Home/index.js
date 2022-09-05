@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
   
     function loadApi(){
-      const url = 'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=PZy6zRJQZ4SsU0awzngnwNhfG2rjdFEg';
+      const url = ' ';
   
       fetch(url)
       .then((result)=> result.json())
