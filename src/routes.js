@@ -13,7 +13,7 @@ function RoutesApp() {
         <Routes>
           <Route path='/' element={ <Home /> } />
           <Route path='/contato' element={ <Contato /> } />
-          <Route path='/detalhes' element={ <Detalhes /> } />
+          <Route path='/detalhes/:title' element={ <Detalhes /> } />
         </Routes>
       </BrowserRouter>
   )

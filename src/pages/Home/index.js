@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { A, Section, Span } from '../../styles';
+import { Link } from "react-router-dom";
+
+import { LinkDetalhes, Section, Span } from '../../styles';
 
 function Home() {
 
@@ -29,7 +31,9 @@ function Home() {
               <Span key={item.rank}>
                   <img src={item.book_image} />
                   <strong>{item.author}</strong>
-                  <A href=''>Detalhes</A>
+                  <Link style={{textDecoration: 'none'}} to={`/detalhes/${item.title}`}>
+                    <LinkDetalhes>Detalhes</LinkDetalhes>
+                  </Link>
               </Span>
             )
           })

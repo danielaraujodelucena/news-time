@@ -35,10 +35,9 @@ export const Span = styled.span`
     align-items: center;
 `;
 
-export const A = styled.a`
-    background-color: aqua;
-    padding: 10px;
-    text-decoration: none;
+export const LinkDetalhes = styled.a`
+    background-color: #FAFAD2;
     color: black;
+    width: 100%;
 `;
 
