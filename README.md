@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# News Time App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é o primeiro com o objetivo de consumir dados de uma `api` através do `fecth` e utilizar rotas com `react-router-dom`. A ideia foi pegar a lista dos livros mais vendidos do The New York Times.
+
+<img src="https://github.com/danielaraujodelucena/nice-food/blob/main/view.gif">
 
 ## Available Scripts
 
